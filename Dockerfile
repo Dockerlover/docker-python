@@ -9,6 +9,7 @@ RUN mkdir -p /code
 VOLUME ["/code","/var/log/supervisor"]
 WORKDIR /code
 # 安装依赖包
+COPY requirements.txt requirements.txt
 RUN  pip install -r requirements.txt
 
 # 配置supervisord
