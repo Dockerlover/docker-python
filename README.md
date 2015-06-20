@@ -29,7 +29,7 @@ Docker化Python
 
 - 注意事项
         
-当然你同样需要编写supervisord.conf，类似这样：
+    当然你同样需要编写supervisord.conf，类似这样：
 
         [supervisord]
 
