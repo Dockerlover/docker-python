@@ -37,6 +37,6 @@ Docker化Python
         
         [program:myweb]
         
-        command=python xxx.py
+        command=/usr/bin/python xxx.py
         
 
