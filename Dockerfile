@@ -8,6 +8,8 @@ RUN apt-get -y install python-dev python-pip
 RUN mkdir -p /code
 VOLUME ["/code","/var/log/supervisor"]
 WORKDIR /code
+# 安装依赖包
+RUN  pip install -r requirements.txt
 
 # 配置supervisord
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
