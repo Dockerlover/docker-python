@@ -26,5 +26,17 @@ Docker化Python
         git clone xxx.git
         cd xxx
         docker run -it -d -v /web/path:/code --name myweb docker-python
+
+- 注意事项
+        
+当然你同样需要编写supervisord.conf，类似这样：
+
+        [supervisord]
+
+        nodaemon=true
+        
+        [program:myweb]
+        
+        command=python xxx.py
         
 
