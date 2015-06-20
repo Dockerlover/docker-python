@@ -6,4 +6,6 @@ MAINTAINER  liuhong1.happy@163.com
 RUN apt-get -y install python-dev python-pip
 # 创建代码路径
 RUN mkdir -p /code
+VOLUME ["/code"]
 WORKDIR /code
+
