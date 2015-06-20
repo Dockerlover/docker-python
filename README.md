@@ -19,4 +19,12 @@ Docker化Python
 
 - 进入容器
 
-        docker exec -it docker-python /bin/bash
+        docker exec -it python /bin/bash
+
+- 使用镜像部署python应用
+
+        git clone xxx.git
+        cd xxx
+        docker run -it -d -v /web/path:/code --name myweb docker-python
+        
+
