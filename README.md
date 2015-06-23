@@ -4,6 +4,7 @@ Docker化Python
 ## 镜像特点
 
 - 2015/6/20 继承基础镜像docker-ubuntu
+- 2015/6/23 默认暴露80端口
 
 ## 使用方法
 
@@ -15,7 +16,6 @@ Docker化Python
 
 - 运行容器[run.sh]
 
-        HOST_IP=$(hostname --all-ip-addresses | awk '{print $1}')
         docker run -it -d --name python -p 8080:80  docker-python
 
 - 进入容器
