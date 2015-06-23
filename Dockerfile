@@ -15,7 +15,8 @@ WORKDIR /code
 # 安装依赖包
 COPY requirements.txt requirements.txt
 RUN  pip install -r requirements.txt
-
+# 默认暴露80端口
+EXPOSE 80
 # 配置supervisord
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # 启动supervisord
