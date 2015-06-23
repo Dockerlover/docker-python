@@ -13,9 +13,10 @@ Docker化Python
         cd docker-python
         docker build -t docker-python .
 
-- 运行容器
+- 运行容器[run.sh]
 
-        docker run -it -d --name python  docker-python
+        HOST_IP=$(hostname --all-ip-addresses | awk '{print $1}')
+        docker run -it -d --name python -p 8080:80  docker-python
 
 - 进入容器
 
@@ -25,7 +26,7 @@ Docker化Python
 
         git clone xxx.git
         cd xxx
-        docker run -it -d -v /web/path:/code --name myweb docker-python
+        docker run -it -d -v /web/path:/code -p 8080:80 --name myweb docker-python
 
 - 注意事项
         
@@ -37,6 +38,6 @@ Docker化Python
         
         [program:myweb]
         
-        command=/usr/bin/python xxx.py
+        command=/usr/bin/python xxx.py 80
         
 
