@@ -6,7 +6,7 @@ MAINTAINER  liuhong1.happy@163.com
 ENV USER_NAME admin
 ENV SERVICE_ID python
 # 安装python环境依赖包
-RUN apt-get -y install python-dev python-requests python-pip 
+RUN apt-get update && apt-get -y install python-dev python-requests python-pip 
 RUN pip install --upgrade pip
 # 创建代码路径
 RUN mkdir -p /code
